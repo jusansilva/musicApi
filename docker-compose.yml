@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8
+    container_name: mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: musicApiDb
+      MYSQL_USER: musicDbUser
+      MYSQL_PASSWORD: root_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+  musicapi:
+    build: .
+    ports:
+      - "8080:8080"
+
+volumes:
+  mysql_data:

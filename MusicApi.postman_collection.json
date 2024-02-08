@@ -1,0 +1,504 @@
+{
+	"info": {
+		"_postman_id": "7afae2dc-57e4-4384-9f21-d369fcf09df6",
+		"name": "MusicApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31587196"
+	},
+	"item": [
+		{
+			"name": "Artistas",
+			"item": [
+				{
+					"name": "get by Id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/artist",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"artist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Jusan Ma66aaa",
+									"type": "text"
+								},
+								{
+									"key": "nationality",
+									"value": "Brasileiro",
+									"type": "text"
+								},
+								{
+									"key": "site",
+									"value": "https://www.sandevcode.com",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/UDS/Downloads/logo san Dev code (1).png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/artist",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"artist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upate",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "J",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/UDS/Downloads/Yellow and Black Flat Illustrative Football Club Logo.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/artist/edd6313c-931d-4505-a2cd-21a0ce5de410",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"artist",
+								"edd6313c-931d-4505-a2cd-21a0ce5de410"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "J",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/artist/edd6313c-931d-4505-a2cd-21a0ce5de410",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"artist",
+								"edd6313c-931d-4505-a2cd-21a0ce5de410"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Album",
+			"item": [
+				{
+					"name": "get by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/album/14934115-8b03-4784-b0b4-908e0ab80529",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"album",
+								"14934115-8b03-4784-b0b4-908e0ab80529"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/album?page=0&length=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"album"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "length",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Uma nova História",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2022",
+									"type": "text"
+								},
+								{
+									"key": "artistId",
+									"value": "6551f3aa-b928-4beb-9741-9319db4e2d04",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/UDS/Downloads/logo san Dev code.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/album",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"album"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upate",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Uma nova historia 2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/album/14934115-8b03-4784-b0b4-908e0ab80529",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"album",
+								"14934115-8b03-4784-b0b4-908e0ab80529"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/album/14934115-8b03-4784-b0b4-908e0ab80529",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"album",
+								"14934115-8b03-4784-b0b4-908e0ab80529"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Musicas",
+			"item": [
+				{
+					"name": "get by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/music/14934115-8b03-4784-b0b4-908e0ab80529",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"music",
+								"14934115-8b03-4784-b0b4-908e0ab80529"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/music",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"music"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all By Artist",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/music/artist/6184218b-a9cd-4f46-bf87-cd56e2a87c85",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"music",
+								"artist",
+								"6184218b-a9cd-4f46-bf87-cd56e2a87c85"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all By Album",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/music/album/14934115-8b03-4784-b0b4-908e0ab80529?page=0&length=2&orderBy=title",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"music",
+								"album",
+								"14934115-8b03-4784-b0b4-908e0ab80529"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "length",
+									"value": "2"
+								},
+								{
+									"key": "orderBy",
+									"value": "title"
+								},
+								{
+									"key": "by",
+									"value": "asc",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Você some outra vez 2\",\r\n    \"time\" : \"01:10\",\r\n    \"albumId\": \"8b61dc21-665b-4ff3-a51b-262555d8b580\",\r\n    \"track\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/music",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"music"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upate",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Uma nova historia 2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/album/14934115-8b03-4784-b0b4-908e0ab80529",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"album",
+								"14934115-8b03-4784-b0b4-908e0ab80529"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/album/14934115-8b03-4784-b0b4-908e0ab80529",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"album",
+								"14934115-8b03-4784-b0b4-908e0ab80529"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

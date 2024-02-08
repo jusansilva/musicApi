@@ -1,0 +1,49 @@
+ [x] - Deve ser possível inserir, listar, alterar e excluir artistas, álbuns e músicas.
+- [x] - Configuar Entidades
+- [x] - Configurar Banco de dados via docker
+- [x] - conectar banco de dadaos
+- [x] - crud de atistas
+- [x] - crud de album
+- [X] - crud de musicas
+
+[x] - Todas as listagens devem ser unitárias (pelo id) ou paginadas (todos os registros)
+
+[x] - Deve ser possível listar todas as músicas de um determinado Artista com informações sobre o Álbum
+
+[x] - Deve ser possível listar todas as músicas de um Álbum ordenadas por número de faixa ou alfabeticamente pelo título
+
+[x] - Os dados devem ser persistidos utilizando um banco de dados relacional
+
+[x] - Todos os campos são obrigatórios
+
+[x] - O ano de lançamento de um Álbum não pode ser uma data posterior a atual
+[x] - Os números de faixa devem ser maiores que zero
+
+[x] - A duração das músicas deve ter minutos e segundos validos
+
+[x] - O endereço do site do artista deve ser uma URL válida
+
+[x] - As fotos de perfil do artista e de capa do álbum devem ser armazenadas pela API (usando um CDN, armazenamento próprio ou alguma outra alternativa)
+
+[x] - Os dados devem permanecer sempre consistentes
+
+
+Requisitos técnicos da API:
+
+[ ] - Deverão ser criados testes unitários
+
+[x] - Publicar o código em repositório público
+
+[x] - Deve ser utilizado mapeamento objeto relacional
+
+[x] - Utilizar Docker para banco e API
+
+ 
+
+Requisitos do Front-End:
+
+●        Implementar o front-end para consumir a API em ReactJS
+
+●        Utilize Docker para o Front-End
+
+●        Publicar o código em repositório público
