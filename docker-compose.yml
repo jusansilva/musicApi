@@ -1,6 +1,13 @@
 version: '3.8'
 
 services:
+  musicapi:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      mysql:
+        condition: service_healthy
   mysql:
     image: mysql:8
     container_name: mysql-container
@@ -13,10 +20,7 @@ services:
       - "3306:3306"
     volumes:
       - mysql_data:/var/lib/mysql
-  musicapi:
-    build: .
-    ports:
-      - "8080:8080"
-
+    healthcheck:
+      test: ["CMD-SHELL", "mysql --host=localhost --user=musicDbUser --password=root_password musicApiDb"]
 volumes:
   mysql_data:

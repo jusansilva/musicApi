@@ -8,6 +8,11 @@
 
 - Clone o repositorio
 - importe em sua IDE
+- build sua aplicação criando o arquivo musicapi.jar na raiz<br>
+```./mvnw clean package``` no Windons ```mvnw.cmd clean package```<br> 
+
+```java -jar musicapi.jar```
+
 - rode o comando
 ```docker-composer up -d ```
 - esse comando ira subir o banco de dados mysql e rodar a aplicação via dorcker na porta 8080

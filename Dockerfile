@@ -1,7 +1,7 @@
-FROM adoptopenjdk:17-jre-hotspot
+FROM openjdk:17-jdk-slim-buster
 
 WORKDIR /app
 
-COPY musicapi/musicapi.jar app.jar
+COPY target/musicapi-0.0.1-SNAPSHOT.jar app.jar
 
 CMD ["java", "-jar", "app.jar"]
